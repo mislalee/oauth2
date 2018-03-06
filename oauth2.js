@@ -1,4 +1,4 @@
-let oauth2orize = require('./node_modules/oauth2orize'),
+let oauth2orize = require('./node_modules/oauth2orize/lib'),
 passport = require('passport'),
 models = require('./models'),
 utils = require('./helpers/common/utils'),

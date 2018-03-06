@@ -28,6 +28,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 require('./controllers/AuthCtrl');
 
 // token endpoints
+app.post('/oauth/login', res.writeHead(200, {"Content-Type": "text/plain"});
+        res.write('Vous êtes à l\'accueil, que puis-je pour vous ?'); );
+
 app.post('/oauth/login', oauth2.token);//pour s'authentifier cote client //doit fournir les infos de l'appli autorization basic ( appId,secret)
                                          //+body ( grant-type=password + username(@mail)+password=''+code=0 (mail )ou 1(mobile) )===>access token + refresh token + expire 
 app.post('/oauth/refresh', oauth2.token);//ou bien pour creer un nv access token a partir d'un refresh token lors de son l'expiration // 

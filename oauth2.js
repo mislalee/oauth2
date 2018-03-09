@@ -227,12 +227,16 @@ exports.login = [
       modelsSequelize.Users.findOne({
         where: {userId: id} })
      .then(function(userFound){
+     console.log('apres la requete');
     if(userFound){ // si l'utilisateur existe
+     console.log('userfpund');
         const passwordHash = crypto.createHmac('sha256', Password).digest('hex');
         if (userFound.dataValues.password !== passwordHash) {
+         console.log('mot de passe incorrecte');
           return res.status(409).json({'error':"mot de passe incorrecte" });
         }
         else { //mot de passe correct  
+         console.log('delete');
           modelsSequelize.Code.destroy({
             where: { userId: id }});
            let nb =  utils.nbalea(4);

@@ -149,6 +149,7 @@ return callback();
     tokenCtrl.saveNewAccessToken({
       applicationId: client.applicationId,
       username: methodResponse.userId,
+      expires: config.token.calculateExpirationDate(),
       scope: methodResponse.scope
     },
       // callback method

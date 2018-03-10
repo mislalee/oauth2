@@ -171,7 +171,7 @@ return callback();
     console.log(err);
     return done(null);
   }
-  return done(null, newToken, newRefreshToken, {
+  return done(null, newToken, {
     expires_in: config.token.expiresIn
   });
 });

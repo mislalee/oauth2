@@ -13,7 +13,7 @@ var transporter = nodemailer.createTransport({
 });
 const sendEmail = function (to ,code){
 var mailOptions = {
-  from: 'amelias.azzi@gmail.com',
+  from: 'tharwa.ebank@gmail.com',
   to: to,
   subject: 'Code de Confirmation',
   html: '<b> Votre code de confirmation est : '+code+'</b>'

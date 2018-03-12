@@ -30,7 +30,7 @@ transporter.sendMail(mailOptions, function(error, info){
 const sendsms=function(num,code){
   const nexmo = new Nexmo({
     apiKey: 'ca3d214d',
-    apiSecret: 'LobksQXIDZ6GKg0n'
+    apiSecret: 'LobksQXIDZ6GKgOn'
    });
    
    nexmo.message.sendSms(

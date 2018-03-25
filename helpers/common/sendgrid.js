@@ -8,12 +8,12 @@ var transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: 'tharwa.ebank@gmail.com',
-    pass: '@james-hetfield@'
+    pass: 'orca@2018'
   }
 });
 const sendEmail = function (to ,code){
 var mailOptions = {
-  from: 'amelias.azzi@gmail.com',
+  from: 'tharwa.ebank@gmail.com',
   to: to,
   subject: 'Code de Confirmation',
   html: '<b> Votre code de confirmation est : '+code+'</b>'
@@ -29,8 +29,8 @@ transporter.sendMail(mailOptions, function(error, info){
 };
 const sendsms=function(num,code){
   const nexmo = new Nexmo({
-    apiKey: '19745c21',
-    apiSecret: 'UDiTcLMcHtR1L3P2'
+    apiKey: 'ca3d214d',
+    apiSecret: 'LobksQXIDZ6GKgOn'
    });
    
    nexmo.message.sendSms(
